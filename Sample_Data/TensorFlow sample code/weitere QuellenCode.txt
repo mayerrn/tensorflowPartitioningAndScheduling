@@ -1,0 +1,18 @@
+https://github.com/pkmital/tensorflow_tutorials
+
+
+Convolutional network
+https://www.tensorflow.org/versions/r0.11/tutorials/deep_cnn/index.html#convolutional-neural-networks
+https://github.com/tensorflow/tensorflow/tree/r0.11/tensorflow/models/image/cifar10/
+
+TensorFlow Linear Model Tutorial
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/learn/wide_n_deep_tutorial.py
+
+
+https://www.tensorflow.org/versions/r0.11/tutorials/recurrent/index.html#recurrent-neural-networks
+python ptb_word_lm.py --data_path=/tmp/simple-examples/data/ --model small
+
+
+
+
+https://github.com/ibab/tensorflow-wavenet

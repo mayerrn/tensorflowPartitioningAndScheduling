@@ -1,0 +1,11 @@
+Id,(Outgoing) node,(Incoming) node,Colocation nodes,#tensorSize, #operations, RAM storage, Device constraint 
+0,5;1;6,,,681,250,10,NO
+1,6,0,,448,786,10,NO
+2,7,8,,370,651,10,NO
+3,8,,,373,574,10,NO
+4,8;9,,,862,883,10,NO
+5,,0,,391,244,10,NO
+6,,0;1,,540,851,10,NO
+7,,2,,69,737,10,NO
+8,2;9;4,3,,256,982,10,NO
+9,,4;8,,332,116,10,NO

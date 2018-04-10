@@ -1,0 +1,16 @@
+costmodelFile = open('costmodel_simple_mnist_example', 'w')
+graphFile = open('graph_simple_mnist_example', 'w')
+
+options = tf.GraphOptions(build_cost_model=50)
+cfg = tf.ConfigProto(graph_options=options)
+sess = tf.Session(config=cfg)
+metadata = tf.RunMetadata()
+# This is optional, but will generally give you more accurate statistics,
+run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys},options=run_options, run_metadata=metadata)
+	
+	
+	if len(metadata.cost_graph.node) > 0:
+		costmodelFile.write(str(metadata.cost_graph))
+		
+graphFile.write(str(tf.get_default_graph().as_graph_def()))

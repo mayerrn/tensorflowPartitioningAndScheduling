@@ -1,0 +1,932 @@
+node {
+  name: "_SOURCE"
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "_SINK"
+  id: 1
+  temporary_memory_size: -1
+  control_input: 0
+  control_input: 0
+  control_input: 65
+}
+node {
+  name: "_recv_Placeholder_1_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 2
+  output_info {
+    size: -1
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/mul_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 3
+  input_info {
+    preceding_node: 2
+  }
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "_recv_Placeholder_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 4
+  output_info {
+    size: -1
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 5
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 2
+}
+node {
+  name: "Variable/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 6
+  input_info {
+    preceding_node: 5
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "MatMul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 7
+  input_info {
+    preceding_node: 4
+  }
+  input_info {
+    preceding_node: 6
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 209
+}
+node {
+  name: "gradients/add_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 8
+  input_info {
+    preceding_node: 7
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "Variable_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 9
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_1/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 10
+  input_info {
+    preceding_node: 9
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "add"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 11
+  input_info {
+    preceding_node: 7
+  }
+  input_info {
+    preceding_node: 10
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 17
+}
+node {
+  name: "Softmax"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 12
+  input_info {
+    preceding_node: 11
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 80
+}
+node {
+  name: "Log"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 13
+  input_info {
+    preceding_node: 12
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 14
+  input_info {
+    preceding_node: 2
+  }
+  input_info {
+    preceding_node: 13
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Sum_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 15
+  input_info {
+    preceding_node: 14
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/mul_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 16
+  input_info {
+    preceding_node: 13
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/mul_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 17
+  input_info {
+    preceding_node: 3
+  }
+  input_info {
+    preceding_node: 16
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 18
+  input_info {
+    preceding_node: 14
+  }
+  input_info {
+    preceding_node: 66
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 19
+}
+node {
+  name: "Neg"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 19
+  input_info {
+    preceding_node: 18
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Mean_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 20
+  input_info {
+    preceding_node: 19
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Mean_grad/Tile"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 21
+  input_info {
+    preceding_node: 69
+  }
+  input_info {
+    preceding_node: 20
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "gradients/Mean_grad/Const"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 22
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 10
+}
+node {
+  name: "gradients/Mean_grad/Prod"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 23
+  input_info {
+    preceding_node: 20
+  }
+  input_info {
+    preceding_node: 22
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7
+}
+node {
+  name: "gradients/Mean_grad/floordiv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 24
+  input_info {
+    preceding_node: 23
+  }
+  input_info {
+    preceding_node: 68
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/Mean_grad/Cast"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 25
+  input_info {
+    preceding_node: 24
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Mean_grad/truediv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 26
+  input_info {
+    preceding_node: 21
+  }
+  input_info {
+    preceding_node: 25
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/Neg_grad/Neg"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 27
+  input_info {
+    preceding_node: 26
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Sum_grad/DynamicStitch"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 28
+  input_info {
+    preceding_node: 67
+  }
+  input_info {
+    preceding_node: 66
+  }
+  input_info {
+    preceding_node: 15
+  }
+  input_info {
+    preceding_node: 66
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/Sum_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 29
+  input_info {
+    preceding_node: 27
+  }
+  input_info {
+    preceding_node: 28
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Sum_grad/Maximum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 30
+  input_info {
+    preceding_node: 28
+  }
+  input_info {
+    preceding_node: 68
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 12
+}
+node {
+  name: "gradients/Sum_grad/floordiv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 31
+  input_info {
+    preceding_node: 15
+  }
+  input_info {
+    preceding_node: 30
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/Sum_grad/Tile"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 32
+  input_info {
+    preceding_node: 29
+  }
+  input_info {
+    preceding_node: 31
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 43
+}
+node {
+  name: "gradients/mul_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 33
+  input_info {
+    preceding_node: 32
+  }
+  input_info {
+    preceding_node: 13
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/mul_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 34
+  input_info {
+    preceding_node: 33
+  }
+  input_info {
+    preceding_node: 17
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/mul_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 35
+  input_info {
+    preceding_node: 34
+  }
+  input_info {
+    preceding_node: 3
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/mul_grad/mul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 36
+  input_info {
+    preceding_node: 2
+  }
+  input_info {
+    preceding_node: 32
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/mul_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 37
+  input_info {
+    preceding_node: 36
+  }
+  input_info {
+    preceding_node: 17
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/mul_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 38
+  input_info {
+    preceding_node: 37
+  }
+  input_info {
+    preceding_node: 16
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/mul_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 39
+  temporary_memory_size: -1
+  control_input: 35
+  control_input: 38
+  compute_cost: 1
+}
+node {
+  name: "gradients/mul_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 40
+  input_info {
+    preceding_node: 38
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 39
+}
+node {
+  name: "gradients/Log_grad/Inv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 41
+  input_info {
+    preceding_node: 12
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 40
+  compute_cost: 2
+}
+node {
+  name: "gradients/Log_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 42
+  input_info {
+    preceding_node: 40
+  }
+  input_info {
+    preceding_node: 41
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Softmax_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 43
+  input_info {
+    preceding_node: 42
+  }
+  input_info {
+    preceding_node: 12
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Softmax_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 44
+  input_info {
+    preceding_node: 43
+  }
+  input_info {
+    preceding_node: 66
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/Softmax_grad/Reshape/shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 45
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/Softmax_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 46
+  input_info {
+    preceding_node: 44
+  }
+  input_info {
+    preceding_node: 45
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Softmax_grad/sub"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 47
+  input_info {
+    preceding_node: 42
+  }
+  input_info {
+    preceding_node: 46
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 33
+}
+node {
+  name: "gradients/Softmax_grad/mul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 48
+  input_info {
+    preceding_node: 47
+  }
+  input_info {
+    preceding_node: 12
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/add_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 49
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/add_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 50
+  input_info {
+    preceding_node: 8
+  }
+  input_info {
+    preceding_node: 49
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/add_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 51
+  input_info {
+    preceding_node: 48
+  }
+  input_info {
+    preceding_node: 50
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/add_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 52
+  input_info {
+    preceding_node: 51
+  }
+  input_info {
+    preceding_node: 8
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/add_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 53
+  input_info {
+    preceding_node: 48
+  }
+  input_info {
+    preceding_node: 50
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/add_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 54
+  input_info {
+    preceding_node: 53
+  }
+  input_info {
+    preceding_node: 49
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/add_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 55
+  temporary_memory_size: -1
+  control_input: 52
+  control_input: 54
+  compute_cost: 1
+}
+node {
+  name: "gradients/add_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 56
+  input_info {
+    preceding_node: 52
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 55
+}
+node {
+  name: "gradients/MatMul_grad/MatMul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 57
+  input_info {
+    preceding_node: 56
+  }
+  input_info {
+    preceding_node: 6
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 150
+}
+node {
+  name: "gradients/MatMul_grad/MatMul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 58
+  input_info {
+    preceding_node: 4
+  }
+  input_info {
+    preceding_node: 56
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 116
+}
+node {
+  name: "gradients/MatMul_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 59
+  temporary_memory_size: -1
+  control_input: 57
+  control_input: 58
+  compute_cost: 1
+}
+node {
+  name: "gradients/MatMul_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 60
+  input_info {
+    preceding_node: 58
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 59
+  compute_cost: 1
+}
+node {
+  name: "gradients/add_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 61
+  input_info {
+    preceding_node: 54
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 55
+  compute_cost: 1
+}
+node {
+  name: "GradientDescent/learning_rate"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 62
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "GradientDescent/update_Variable/ApplyGradientDescent"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 63
+  input_info {
+    preceding_node: 5
+  }
+  input_info {
+    preceding_node: 62
+  }
+  input_info {
+    preceding_node: 60
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "GradientDescent/update_Variable_1/ApplyGradientDescent"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 64
+  input_info {
+    preceding_node: 9
+  }
+  input_info {
+    preceding_node: 62
+  }
+  input_info {
+    preceding_node: 61
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "GradientDescent"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 65
+  temporary_memory_size: -1
+  control_input: 63
+  control_input: 64
+  compute_cost: 1
+}
+node {
+  name: "gradients/Sum_grad/mod/_1__cf__1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 66
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/Sum_grad/range/_2__cf__2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 67
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Mean_grad/Maximum/_3__cf__3"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 68
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/Mean_grad/Reshape/_4__cf__4"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 69
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}

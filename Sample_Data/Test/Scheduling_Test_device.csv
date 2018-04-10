@@ -1,0 +1,4 @@
+Id,RAM,#operations,commnication speed,type
+0,150000,80,100;200,CPU
+1,430000,40,100,CPU
+2,160000,20,,CPU

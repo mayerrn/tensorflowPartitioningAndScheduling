@@ -1,0 +1,2788 @@
+node {
+  name: "_SOURCE"
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "_SINK"
+  id: 1
+  temporary_memory_size: -1
+  control_input: 0
+  control_input: 0
+  control_input: 191
+  compute_cost: 1
+}
+node {
+  name: "_recv_Placeholder_2_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 2
+  output_info {
+    size: -1
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "gradients/dropout/Div_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 3
+  input_info {
+    preceding_node: 2
+  }
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/Div_grad/Square"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 4
+  input_info {
+    preceding_node: 2
+  }
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "_recv_Placeholder_1_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 5
+  output_info {
+    size: -1
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Shape_2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 6
+  input_info {
+    preceding_node: 5
+  }
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "_recv_Placeholder_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 7
+  output_info {
+    size: -1
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 8
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 9
+  input_info {
+    preceding_node: 8
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "Variable_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 10
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_1/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 11
+  input_info {
+    preceding_node: 10
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 12
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable_2/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 13
+  input_info {
+    preceding_node: 12
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_3"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 14
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_3/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 15
+  input_info {
+    preceding_node: 14
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_4"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 16
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_4/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 17
+  input_info {
+    preceding_node: 16
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_5"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 18
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable_5/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 19
+  input_info {
+    preceding_node: 18
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_6"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 20
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_6/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 21
+  input_info {
+    preceding_node: 20
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable_7"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 22
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_7/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 23
+  input_info {
+    preceding_node: 22
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Reshape/shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 24
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 25
+  input_info {
+    preceding_node: 7
+  }
+  input_info {
+    preceding_node: 24
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "Conv2D"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 26
+  input_info {
+    preceding_node: 25
+  }
+  input_info {
+    preceding_node: 9
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 19095
+}
+node {
+  name: "BiasAdd"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 27
+  input_info {
+    preceding_node: 26
+  }
+  input_info {
+    preceding_node: 17
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3176
+}
+node {
+  name: "Relu"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 28
+  input_info {
+    preceding_node: 27
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3378
+}
+node {
+  name: "MaxPool"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 29
+  input_info {
+    preceding_node: 28
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2418
+}
+node {
+  name: "Conv2D_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 30
+  input_info {
+    preceding_node: 29
+  }
+  input_info {
+    preceding_node: 11
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 78019
+}
+node {
+  name: "BiasAdd_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 31
+  input_info {
+    preceding_node: 30
+  }
+  input_info {
+    preceding_node: 19
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2905
+}
+node {
+  name: "Relu_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 32
+  input_info {
+    preceding_node: 31
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2017
+}
+node {
+  name: "MaxPool_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 33
+  input_info {
+    preceding_node: 32
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1346
+}
+node {
+  name: "gradients/Reshape_1_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 34
+  input_info {
+    preceding_node: 33
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7
+}
+node {
+  name: "gradients/Conv2D_1_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 35
+  input_info {
+    preceding_node: 29
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "gradients/Conv2D_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 36
+  input_info {
+    preceding_node: 25
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "Reshape_1/shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 37
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 38
+  input_info {
+    preceding_node: 33
+  }
+  input_info {
+    preceding_node: 37
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "MatMul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 39
+  input_info {
+    preceding_node: 38
+  }
+  input_info {
+    preceding_node: 13
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 19223
+}
+node {
+  name: "Add"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 40
+  input_info {
+    preceding_node: 39
+  }
+  input_info {
+    preceding_node: 21
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 653
+}
+node {
+  name: "Relu_2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 41
+  input_info {
+    preceding_node: 40
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 46
+}
+node {
+  name: "dropout/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 42
+  input_info {
+    preceding_node: 41
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "dropout/random_uniform/RandomUniform"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 43
+  input_info {
+    preceding_node: 42
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 543
+}
+node {
+  name: "dropout/Div"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 44
+  input_info {
+    preceding_node: 41
+  }
+  input_info {
+    preceding_node: 2
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 461
+}
+node {
+  name: "gradients/dropout/mul_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 45
+  input_info {
+    preceding_node: 44
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/dropout/Div_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 46
+  input_info {
+    preceding_node: 42
+  }
+  input_info {
+    preceding_node: 3
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/dropout/Div_grad/Neg"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 47
+  input_info {
+    preceding_node: 41
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 411
+}
+node {
+  name: "gradients/dropout/Div_grad/truediv_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 48
+  input_info {
+    preceding_node: 47
+  }
+  input_info {
+    preceding_node: 4
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 256
+}
+node {
+  name: "gradients/Add_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 49
+  input_info {
+    preceding_node: 39
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 9
+}
+node {
+  name: "dropout/random_uniform/min"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 50
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "dropout/random_uniform/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 51
+  input_info {
+    preceding_node: 43
+  }
+  input_info {
+    preceding_node: 192
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 262
+}
+node {
+  name: "dropout/random_uniform"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 52
+  input_info {
+    preceding_node: 51
+  }
+  input_info {
+    preceding_node: 50
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 78
+}
+node {
+  name: "dropout/add"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 53
+  input_info {
+    preceding_node: 2
+  }
+  input_info {
+    preceding_node: 52
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 44
+}
+node {
+  name: "dropout/Floor"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 54
+  input_info {
+    preceding_node: 53
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 303
+}
+node {
+  name: "dropout/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 55
+  input_info {
+    preceding_node: 44
+  }
+  input_info {
+    preceding_node: 54
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 77
+}
+node {
+  name: "MatMul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 56
+  input_info {
+    preceding_node: 55
+  }
+  input_info {
+    preceding_node: 15
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 191
+}
+node {
+  name: "Add_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 57
+  input_info {
+    preceding_node: 56
+  }
+  input_info {
+    preceding_node: 23
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 25
+}
+node {
+  name: "Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 58
+  input_info {
+    preceding_node: 57
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Add_1_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 59
+  input_info {
+    preceding_node: 56
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/dropout/mul_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 60
+  input_info {
+    preceding_node: 54
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/dropout/mul_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 61
+  input_info {
+    preceding_node: 45
+  }
+  input_info {
+    preceding_node: 60
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "Slice"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 62
+  input_info {
+    preceding_node: 58
+  }
+  input_info {
+    preceding_node: 193
+  }
+  input_info {
+    preceding_node: 193
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "concat/concat_dim"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 63
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "concat/values_0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 64
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "concat"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 65
+  input_info {
+    preceding_node: 63
+  }
+  input_info {
+    preceding_node: 64
+  }
+  input_info {
+    preceding_node: 62
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "Reshape_2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 66
+  input_info {
+    preceding_node: 57
+  }
+  input_info {
+    preceding_node: 65
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "Slice_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 67
+  input_info {
+    preceding_node: 6
+  }
+  input_info {
+    preceding_node: 193
+  }
+  input_info {
+    preceding_node: 193
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "concat_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 68
+  input_info {
+    preceding_node: 63
+  }
+  input_info {
+    preceding_node: 64
+  }
+  input_info {
+    preceding_node: 67
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7
+}
+node {
+  name: "Reshape_3"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 69
+  input_info {
+    preceding_node: 5
+  }
+  input_info {
+    preceding_node: 68
+  }
+  output_info {
+    alias_input_port: 1
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "SoftmaxCrossEntropyWithLogits"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 70
+  input_info {
+    preceding_node: 66
+  }
+  input_info {
+    preceding_node: 69
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 158
+}
+node {
+  name: "gradients/Reshape_4_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 71
+  input_info {
+    preceding_node: 70
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Slice_2/begin"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 72
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Slice_2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 73
+  input_info {
+    preceding_node: 58
+  }
+  input_info {
+    preceding_node: 72
+  }
+  input_info {
+    preceding_node: 193
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "Reshape_4"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 74
+  input_info {
+    preceding_node: 70
+  }
+  input_info {
+    preceding_node: 73
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Mean_grad/Shape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 75
+  input_info {
+    preceding_node: 74
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Mean_grad/Tile"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 76
+  input_info {
+    preceding_node: 195
+  }
+  input_info {
+    preceding_node: 75
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "gradients/Mean_grad/Prod"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 77
+  input_info {
+    preceding_node: 75
+  }
+  input_info {
+    preceding_node: 72
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "gradients/Mean_grad/floordiv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 78
+  input_info {
+    preceding_node: 77
+  }
+  input_info {
+    preceding_node: 194
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/Mean_grad/Cast"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 79
+  input_info {
+    preceding_node: 78
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Mean_grad/truediv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 80
+  input_info {
+    preceding_node: 76
+  }
+  input_info {
+    preceding_node: 79
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/Reshape_4_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 81
+  input_info {
+    preceding_node: 80
+  }
+  input_info {
+    preceding_node: 71
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/SoftmaxCrossEntropyWithLogits_grad/ExpandDims/dim"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 82
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/SoftmaxCrossEntropyWithLogits_grad/ExpandDims"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 83
+  input_info {
+    preceding_node: 81
+  }
+  input_info {
+    preceding_node: 82
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/SoftmaxCrossEntropyWithLogits_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 84
+  input_info {
+    preceding_node: 83
+  }
+  input_info {
+    preceding_node: 70
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 65
+}
+node {
+  name: "gradients/Reshape_2_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 85
+  input_info {
+    preceding_node: 84
+  }
+  input_info {
+    preceding_node: 58
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_1_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 86
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_1_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 87
+  input_info {
+    preceding_node: 59
+  }
+  input_info {
+    preceding_node: 86
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/Add_1_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 88
+  input_info {
+    preceding_node: 85
+  }
+  input_info {
+    preceding_node: 87
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "gradients/Add_1_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 89
+  input_info {
+    preceding_node: 88
+  }
+  input_info {
+    preceding_node: 59
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_1_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 90
+  input_info {
+    preceding_node: 85
+  }
+  input_info {
+    preceding_node: 87
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "gradients/Add_1_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 91
+  input_info {
+    preceding_node: 90
+  }
+  input_info {
+    preceding_node: 86
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_1_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 92
+  temporary_memory_size: -1
+  control_input: 89
+  control_input: 91
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_1_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 93
+  input_info {
+    preceding_node: 89
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 92
+  compute_cost: 1
+}
+node {
+  name: "gradients/MatMul_1_grad/MatMul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 94
+  input_info {
+    preceding_node: 93
+  }
+  input_info {
+    preceding_node: 15
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 197
+}
+node {
+  name: "gradients/MatMul_1_grad/MatMul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 95
+  input_info {
+    preceding_node: 55
+  }
+  input_info {
+    preceding_node: 93
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 362
+}
+node {
+  name: "gradients/MatMul_1_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 96
+  temporary_memory_size: -1
+  control_input: 94
+  control_input: 95
+  compute_cost: 1
+}
+node {
+  name: "gradients/MatMul_1_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 97
+  input_info {
+    preceding_node: 94
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 96
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/mul_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 98
+  input_info {
+    preceding_node: 97
+  }
+  input_info {
+    preceding_node: 54
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 157
+}
+node {
+  name: "gradients/dropout/mul_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 99
+  input_info {
+    preceding_node: 98
+  }
+  input_info {
+    preceding_node: 61
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/dropout/mul_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 100
+  input_info {
+    preceding_node: 99
+  }
+  input_info {
+    preceding_node: 45
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/mul_grad/mul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 101
+  input_info {
+    preceding_node: 44
+  }
+  input_info {
+    preceding_node: 97
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 144
+}
+node {
+  name: "gradients/dropout/mul_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 102
+  input_info {
+    preceding_node: 101
+  }
+  input_info {
+    preceding_node: 61
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/dropout/mul_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 103
+  input_info {
+    preceding_node: 102
+  }
+  input_info {
+    preceding_node: 60
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/mul_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 104
+  temporary_memory_size: -1
+  control_input: 100
+  control_input: 103
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/mul_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 105
+  input_info {
+    preceding_node: 100
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 104
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/Div_grad/truediv"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 106
+  input_info {
+    preceding_node: 105
+  }
+  input_info {
+    preceding_node: 2
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 81
+}
+node {
+  name: "gradients/dropout/Div_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 107
+  input_info {
+    preceding_node: 106
+  }
+  input_info {
+    preceding_node: 46
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 4
+}
+node {
+  name: "gradients/dropout/Div_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 108
+  input_info {
+    preceding_node: 107
+  }
+  input_info {
+    preceding_node: 42
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/Div_grad/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 109
+  input_info {
+    preceding_node: 105
+  }
+  input_info {
+    preceding_node: 48
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 155
+}
+node {
+  name: "gradients/dropout/Div_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 110
+  input_info {
+    preceding_node: 109
+  }
+  input_info {
+    preceding_node: 46
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 101
+}
+node {
+  name: "gradients/dropout/Div_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 111
+  input_info {
+    preceding_node: 110
+  }
+  input_info {
+    preceding_node: 3
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/dropout/Div_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 112
+  temporary_memory_size: -1
+  control_input: 108
+  control_input: 111
+  compute_cost: 1
+}
+node {
+  name: "gradients/dropout/Div_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 113
+  input_info {
+    preceding_node: 108
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 112
+  compute_cost: 1
+}
+node {
+  name: "gradients/Relu_2_grad/ReluGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 114
+  input_info {
+    preceding_node: 113
+  }
+  input_info {
+    preceding_node: 41
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 238
+}
+node {
+  name: "gradients/MatMul_1_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 115
+  input_info {
+    preceding_node: 95
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 96
+}
+node {
+  name: "gradients/Add_1_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 116
+  input_info {
+    preceding_node: 91
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 92
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 117
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_grad/BroadcastGradientArgs"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 118
+  input_info {
+    preceding_node: 49
+  }
+  input_info {
+    preceding_node: 117
+  }
+  output_info {
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6
+}
+node {
+  name: "gradients/Add_grad/Sum"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 119
+  input_info {
+    preceding_node: 114
+  }
+  input_info {
+    preceding_node: 118
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5
+}
+node {
+  name: "gradients/Add_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 120
+  input_info {
+    preceding_node: 119
+  }
+  input_info {
+    preceding_node: 49
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Add_grad/Sum_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 121
+  input_info {
+    preceding_node: 114
+  }
+  input_info {
+    preceding_node: 118
+    preceding_port: 1
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 176
+}
+node {
+  name: "gradients/Add_grad/Reshape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 122
+  input_info {
+    preceding_node: 121
+  }
+  input_info {
+    preceding_node: 117
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "gradients/Add_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 123
+  temporary_memory_size: -1
+  control_input: 120
+  control_input: 122
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 124
+  input_info {
+    preceding_node: 120
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 123
+  compute_cost: 1
+}
+node {
+  name: "gradients/MatMul_grad/MatMul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 125
+  input_info {
+    preceding_node: 124
+  }
+  input_info {
+    preceding_node: 13
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 29432
+}
+node {
+  name: "gradients/MatMul_grad/MatMul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 126
+  input_info {
+    preceding_node: 38
+  }
+  input_info {
+    preceding_node: 124
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 22643
+}
+node {
+  name: "gradients/MatMul_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 127
+  temporary_memory_size: -1
+  control_input: 125
+  control_input: 126
+  compute_cost: 3
+}
+node {
+  name: "gradients/MatMul_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 128
+  input_info {
+    preceding_node: 125
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 127
+  compute_cost: 1
+}
+node {
+  name: "gradients/Reshape_1_grad/Reshape"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 129
+  input_info {
+    preceding_node: 128
+  }
+  input_info {
+    preceding_node: 34
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 3
+}
+node {
+  name: "gradients/MaxPool_1_grad/MaxPoolGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 130
+  input_info {
+    preceding_node: 32
+  }
+  input_info {
+    preceding_node: 33
+  }
+  input_info {
+    preceding_node: 129
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7789
+}
+node {
+  name: "gradients/Relu_1_grad/ReluGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 131
+  input_info {
+    preceding_node: 130
+  }
+  input_info {
+    preceding_node: 32
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6613
+}
+node {
+  name: "gradients/BiasAdd_1_grad/BiasAddGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 132
+  input_info {
+    preceding_node: 131
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 6969
+}
+node {
+  name: "gradients/BiasAdd_1_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 133
+  temporary_memory_size: -1
+  control_input: 131
+  control_input: 132
+  compute_cost: 4
+}
+node {
+  name: "gradients/BiasAdd_1_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 134
+  input_info {
+    preceding_node: 131
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 133
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_1_grad/Conv2DBackpropInput"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 135
+  input_info {
+    preceding_node: 35
+  }
+  input_info {
+    preceding_node: 11
+  }
+  input_info {
+    preceding_node: 134
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 146044
+}
+node {
+  name: "gradients/BiasAdd_1_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 136
+  input_info {
+    preceding_node: 132
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 133
+  compute_cost: 2
+}
+node {
+  name: "gradients/MatMul_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 137
+  input_info {
+    preceding_node: 126
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 127
+  compute_cost: 1
+}
+node {
+  name: "gradients/Add_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 138
+  input_info {
+    preceding_node: 122
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 123
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_1_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 139
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_1_grad/Conv2DBackpropFilter"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 140
+  input_info {
+    preceding_node: 29
+  }
+  input_info {
+    preceding_node: 139
+  }
+  input_info {
+    preceding_node: 134
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 176348
+}
+node {
+  name: "gradients/Conv2D_1_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 141
+  temporary_memory_size: -1
+  control_input: 135
+  control_input: 140
+  compute_cost: 3
+}
+node {
+  name: "gradients/Conv2D_1_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 142
+  input_info {
+    preceding_node: 135
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 141
+  compute_cost: 2
+}
+node {
+  name: "gradients/MaxPool_grad/MaxPoolGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 143
+  input_info {
+    preceding_node: 28
+  }
+  input_info {
+    preceding_node: 29
+  }
+  input_info {
+    preceding_node: 142
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 14541
+}
+node {
+  name: "gradients/Relu_grad/ReluGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 144
+  input_info {
+    preceding_node: 143
+  }
+  input_info {
+    preceding_node: 28
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 5698
+}
+node {
+  name: "gradients/BiasAdd_grad/BiasAddGrad"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 145
+  input_info {
+    preceding_node: 144
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 10516
+}
+node {
+  name: "gradients/BiasAdd_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 146
+  temporary_memory_size: -1
+  control_input: 144
+  control_input: 145
+  compute_cost: 4
+}
+node {
+  name: "gradients/BiasAdd_grad/tuple/control_dependency"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 147
+  input_info {
+    preceding_node: 144
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 146
+  compute_cost: 2
+}
+node {
+  name: "gradients/Conv2D_grad/Conv2DBackpropInput"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 148
+  input_info {
+    preceding_node: 36
+  }
+  input_info {
+    preceding_node: 9
+  }
+  input_info {
+    preceding_node: 147
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 34180
+}
+node {
+  name: "gradients/BiasAdd_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 149
+  input_info {
+    preceding_node: 145
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 146
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_1_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 150
+  input_info {
+    preceding_node: 140
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 141
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_grad/Shape_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 151
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Conv2D_grad/Conv2DBackpropFilter"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 152
+  input_info {
+    preceding_node: 25
+  }
+  input_info {
+    preceding_node: 151
+  }
+  input_info {
+    preceding_node: 147
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 32701
+}
+node {
+  name: "gradients/Conv2D_grad/tuple/group_deps"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 153
+  temporary_memory_size: -1
+  control_input: 148
+  control_input: 152
+  compute_cost: 3
+}
+node {
+  name: "gradients/Conv2D_grad/tuple/control_dependency_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 154
+  input_info {
+    preceding_node: 152
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 153
+  compute_cost: 2
+}
+node {
+  name: "beta1_power"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 155
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "beta1_power/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 156
+  input_info {
+    preceding_node: 155
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "beta2_power"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 157
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "beta2_power/read"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 158
+  input_info {
+    preceding_node: 157
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Variable/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 159
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 160
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_1/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 161
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_1/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 162
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_2/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 163
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_2/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 164
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Variable_3/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 165
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_3/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 166
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_4/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 167
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_4/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 168
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_5/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 169
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_5/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 170
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_6/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 171
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_6/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 172
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_7/Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 173
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Variable_7/Adam_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 174
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Adam/learning_rate"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 175
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Adam/beta1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 176
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+}
+node {
+  name: "Adam/beta2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 177
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Adam/epsilon"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 178
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "Adam/update_Variable/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 179
+  input_info {
+    preceding_node: 8
+  }
+  input_info {
+    preceding_node: 159
+  }
+  input_info {
+    preceding_node: 160
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 154
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 11
+}
+node {
+  name: "Adam/update_Variable_4/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 180
+  input_info {
+    preceding_node: 16
+  }
+  input_info {
+    preceding_node: 167
+  }
+  input_info {
+    preceding_node: 168
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 149
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 15
+}
+node {
+  name: "Adam/update_Variable_1/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 181
+  input_info {
+    preceding_node: 10
+  }
+  input_info {
+    preceding_node: 161
+  }
+  input_info {
+    preceding_node: 162
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 150
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 12621
+}
+node {
+  name: "Adam/update_Variable_5/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 182
+  input_info {
+    preceding_node: 18
+  }
+  input_info {
+    preceding_node: 169
+  }
+  input_info {
+    preceding_node: 170
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 136
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7
+}
+node {
+  name: "Adam/update_Variable_2/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 183
+  input_info {
+    preceding_node: 12
+  }
+  input_info {
+    preceding_node: 163
+  }
+  input_info {
+    preceding_node: 164
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 137
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 11193
+}
+node {
+  name: "Adam/update_Variable_6/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 184
+  input_info {
+    preceding_node: 20
+  }
+  input_info {
+    preceding_node: 171
+  }
+  input_info {
+    preceding_node: 172
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 138
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 9
+}
+node {
+  name: "Adam/update_Variable_3/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 185
+  input_info {
+    preceding_node: 14
+  }
+  input_info {
+    preceding_node: 165
+  }
+  input_info {
+    preceding_node: 166
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 115
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 25
+}
+node {
+  name: "Adam/update_Variable_7/ApplyAdam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 186
+  input_info {
+    preceding_node: 22
+  }
+  input_info {
+    preceding_node: 173
+  }
+  input_info {
+    preceding_node: 174
+  }
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 175
+  }
+  input_info {
+    preceding_node: 176
+  }
+  input_info {
+    preceding_node: 177
+  }
+  input_info {
+    preceding_node: 178
+  }
+  input_info {
+    preceding_node: 116
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 7
+}
+node {
+  name: "Adam/mul"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 187
+  input_info {
+    preceding_node: 156
+  }
+  input_info {
+    preceding_node: 176
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 179
+  control_input: 180
+  control_input: 181
+  control_input: 182
+  control_input: 183
+  control_input: 184
+  control_input: 185
+  control_input: 186
+  compute_cost: 3
+}
+node {
+  name: "Adam/Assign"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 188
+  input_info {
+    preceding_node: 155
+  }
+  input_info {
+    preceding_node: 187
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 1
+}
+node {
+  name: "Adam/mul_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 189
+  input_info {
+    preceding_node: 158
+  }
+  input_info {
+    preceding_node: 177
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  control_input: 179
+  control_input: 180
+  control_input: 181
+  control_input: 182
+  control_input: 183
+  control_input: 184
+  control_input: 185
+  control_input: 186
+  compute_cost: 9
+}
+node {
+  name: "Adam/Assign_1"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 190
+  input_info {
+    preceding_node: 157
+  }
+  input_info {
+    preceding_node: 189
+  }
+  output_info {
+  }
+  temporary_memory_size: -1
+  compute_cost: 2
+}
+node {
+  name: "Adam"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 191
+  temporary_memory_size: -1
+  control_input: 179
+  control_input: 180
+  control_input: 181
+  control_input: 182
+  control_input: 183
+  control_input: 184
+  control_input: 185
+  control_input: 186
+  control_input: 188
+  control_input: 190
+  compute_cost: 1
+}
+node {
+  name: "dropout/random_uniform/sub/_0__cf__0"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 192
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 2
+}
+node {
+  name: "Slice/begin/_2__cf__2"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 193
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Mean_grad/Maximum/_3__cf__3"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 194
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}
+node {
+  name: "gradients/Mean_grad/Reshape/_5__cf__5"
+  device: "/job:localhost/replica:0/task:0/cpu:0"
+  id: 195
+  output_info {
+    alias_input_port: -1
+  }
+  temporary_memory_size: -1
+  control_input: 0
+  compute_cost: 1
+}

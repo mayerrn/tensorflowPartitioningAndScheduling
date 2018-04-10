@@ -1,0 +1,8 @@
+Id,(Outgoing) node,(Incoming) node,Colocation nodes,#tensorSize, #operations, RAM storage,Device constraint ,name
+1,4;7,,,100,160,10,NO,
+2,,7,,800,40,20,NO,
+3,4,,,200,40,30,NO,
+4,6,3;1,,300,40,40,NO,
+5,,7,,600,80,50,NO,
+6,,4,,900,20,60,NO,
+7,2;5,1,,500,80,70,NO,
